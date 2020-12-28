@@ -1,0 +1,9 @@
+{
+  "project_name": "test-project",
+  "project_verbose_name": "Test Project",
+
+  "_extensions": ["jinja2_git.GitExtension"],
+  "_copy_without_render": [
+    ".venv"
+  ]
+}

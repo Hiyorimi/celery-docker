@@ -1,19 +1,22 @@
 # Celery 5.0.2 Docker example
 
-This is a fork of [bstiel/celery-docker](https://github.com/bstiel/celery-docker) updated with poetry.
+This is a fork of [bstiel/celery-docker](https://github.com/bstiel/celery-docker) updated with poetry and cookiecutter.
 
-## Configuration
+## Features
 
-Edit [docker-compose.yml](docker-compose.yml) file and replace `CELERY_BROKER_URL` with connection string for a queue manager.
+- Ready Dockerfile setup
+- [`poetry`](https://github.com/python-poetry/poetry) for managing dependencies
 
-Default setting `CELERY_BROKER_URL=amqp://admin:mypass@172.23.0.1:5672` is for Mac running RabbitMQ with
+## Installation
+
+Firstly, you will need to install [dependencies](https://cookiecutter.readthedocs.io/en/latest/):
 
 ```bash
-docker run -d -p 5672:5672 -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=mypass rabbitmq
+pip install cookiecutter jinja2-git
 ```
 
-## Launch
+Then, create a project itself:
 
 ```bash
-docker-compose up --build
+cookiecutter gh:Hiyorimi/celery-docker
 ```
