@@ -1,8 +1,7 @@
 [tool.poetry]
-name = "kitchen_ds_autostops"
-version = "0.1.0"
+name = "celery-docker"
+version = "0.2.0"
 description = ""
-authors = ["Kirill Malev"]
 
 [tool.poetry.dependencies]
 python = "^3.6"

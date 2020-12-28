@@ -9,18 +9,7 @@ services:
     depends_on:
       - beat
     restart: 'no'
-    volumes: 
-      - ./app:/app
-
-  worker-2:
-    build: .
-    image: *img
-    command: [celery, -A, tasks, worker, --pool=gevent, --concurrency=20, --queues=worker_2, --loglevel=INFO]
-    environment: *env
-    depends_on:
-      - beat
-    restart: 'no'
-    volumes: 
+    volumes:
       - ./app:/app
 
   beat:
@@ -29,5 +18,5 @@ services:
     command: [celery, -A, tasks, beat, --loglevel=INFO]
     environment: *env
     restart: 'no'
-    volumes: 
+    volumes:
       - ./app:/app
