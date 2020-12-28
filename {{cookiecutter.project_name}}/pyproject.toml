@@ -1,11 +1,11 @@
 [tool.poetry]
 name = "celery-docker"
-version = "0.2.0"
+version = "0.3.0"
 description = ""
 authors = []
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.7"
 celery = "^5.0.4"
 gevent = "^20.9.0"
 
