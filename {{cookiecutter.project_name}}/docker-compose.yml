@@ -5,7 +5,7 @@ services:
     image: &img worker
     command: [celery, -A, tasks, worker, --pool=gevent, --concurrency=20, --loglevel=INFO]
     environment: &env
-      - CELERY_BROKER_URL=amqp://admin:mypass@172.23.0.1:5672
+      - CELERY_BROKER_URL=amqp://admin:mypass@172.17.0.1:5672
     depends_on:
       - beat
     restart: 'no'
